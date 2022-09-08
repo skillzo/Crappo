@@ -1,0 +1,46 @@
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.5em 2em;
+  background-color: #bed7ee;
+}
+#dark.footer1 {
+  background-color: #0d0d2b;
+  color: white;
+}
+#dark.footer1 li {
+  color: #ffffffb3;
+}
+.footer1 ul li {
+  list-style: none;
+  margin: 1em 0;
+  margin-left: -2em;
+}
+.payment img {
+  width: 30px;
+  height: 20px;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.432);
+  object-fit: cover;
+}
+.payments {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 1025px) {
+  .footer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer {
+    width: 25%;
+    padding: 0 1em;
+    text-align: left;
+  }
+  .footer.navbar-logo {
+    margin-bottom: 10.5em;
+  }
+}

@@ -1,0 +1,56 @@
+.header-numbers {
+    background-color: #d7e7f6;
+    padding: 2em 0.5em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    padding: 0 1em;
+  }
+  #dark.header-numbers{
+    background-color:#0d0d2b;
+  }
+  .main-numbers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c0cee0;
+    color: #ffffffcc;
+    border-radius: 5px;
+    margin: 0 0.1em;
+    padding: 0 0.5em;
+  }
+  #dark.main-numbers{
+    background-color:#5a6068;
+  }
+  
+  .numbers-logo img {
+    width: 100%;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+
+  .main-numbers__text {
+    font-size: 0.8em;
+    margin-left: 1em;
+  }
+  .main-numbers__text h1 {
+    margin-top: 0.2em;
+  }
+  .main-numbers__text p {
+    font-size: 0.8em;
+    margin-top: -1.1em;
+  }
+  
+  @media (min-width:1025px){
+    .header-numbers{
+      font-size: 1.5em;
+      font-weight: 600;
+      padding: 1em 10em;
+      background-color: none;
+    }
+
+  }

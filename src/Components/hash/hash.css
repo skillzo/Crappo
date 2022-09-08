@@ -1,0 +1,91 @@
+.hash-container {
+  position: relative;
+  padding: 0.2em 0.5em;
+  background-color: #d7e7f6;
+  height: 25vh;
+}
+#dark.hash-container {
+  background-color: #0d0d2b;
+  color: white;
+}
+.hash-container p {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+#dark.hash-container p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.hashtab {
+  position: absolute;
+  background-color: white;
+  top: 10em;
+  left: 2em;
+  width: 80%;
+  padding: 2em 1em;
+  padding-bottom: 0.8em;
+  border-radius: 15px;
+  line-height: 0.4em;
+  font-size: 0.9em;
+  box-shadow: 1px 1.5px 5px 1px rgba(0, 0, 0, 0.425);
+}
+#dark.hashtab {
+  color: black;
+}
+#dark.hashtab p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.hashtab input,
+select {
+  border: none;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0.5em 0.5em;
+  padding: 0.6em 1.5em;
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 5px 0.1px rgba(0, 0, 0, 0.425);
+  font-size: 0.8em;
+  outline: none;
+}
+.hash-button {
+  display: block;
+  margin-left: 0.5em;
+}
+.hashtab-text {
+  margin-top: 2em;
+}
+::-webkit-input-placeholder{
+  color: red;
+}
+
+@media (min-width: 1025px) {
+  .hash-container {
+    text-align: center;
+    height: 30vh;
+    font-size: 1.1em;
+
+  }
+  .hash-container h2 {
+    font-size: 2.5em;
+  }
+  .hashtab {
+    margin: 0 20%;
+    width: 60%;
+    margin-top: 3em;
+    text-align: left;
+    padding: 2em 3em;
+  }
+  .hashtab input{
+    width: 50%;
+    padding: 1em;
+  }
+  .hashtab select{
+    width: 20%;
+    padding: 1em;
+  }
+  .hash-button {
+    display: inline;
+    margin-left: 3em;
+  }
+}

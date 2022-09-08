@@ -1,0 +1,132 @@
+.invest {
+  padding: 0.5em 1em;
+  background-color: #bed7ee;
+  padding-bottom: 3em;
+}
+#dark.invest {
+  background-color: #491f98;
+  color: white;
+}
+#dark.invest p {
+  color: #ffffffb3;
+}
+.invest p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8em;
+}
+
+.card-image {
+  margin: 5em 0;
+}
+.card-image p {
+  margin-top: 2em;
+  width: 80%;
+}
+.invest-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: fill;
+  margin-top: 2em;
+}
+.invest-image2 img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* start minning */
+
+.start-mining {
+  background-image: url(../../Assest/Mask.png);
+  padding: 1em 1em;
+  font-size: 1em;
+  border-radius: 10px;
+  background-color: #3671E9;
+  color: white;
+}
+.start-mining p{
+  margin-top: -0.5em;
+  margin-bottom: 3em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.start-mining input {
+  width: 90%;
+  padding: 0.8em;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  font-size: 0.8em;
+  font-weight: 700;
+  outline: none;
+  margin-bottom: 1em;
+}
+::-webkit-input-placeholder{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 1025px) {
+
+  .invest{
+   padding: 8em 8em;
+  }
+  .invest h2{
+    text-align: center;
+    font-size: 2.5em;
+    width: 60%;
+    margin: 0 20%;
+  }
+  .invest p{
+    font-size: 0.7em;
+    width: 70%;
+  }
+  .card-image {
+    display: flex;
+  }
+  .invest-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  .invest-image img {
+    width: 100%;
+    height: 350px;
+    margin-right: -3em;
+  }
+  .card-image__text {
+    padding: 2em 1em;
+    width: 40%;
+    font-size: 1.5em;
+    margin-left: 3em;
+    margin-top: 1em;
+  }
+  .card-image2{
+    flex-direction: row-reverse;
+  }
+  .card-image__text2{
+    margin-left: 4em;
+  }
+  .invest-image3 img{
+    margin-right: 4em;
+  }
+  .start-mining {
+    width: 60%;
+    margin:0 20%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .start-mining p{
+    font-size: 0.8em;
+    width: 80%;
+    font-weight: 600;
+  }
+  .start-mining__input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+  .start-mining__input input{
+    width: 60%;
+    margin-right: 1em;
+  }
+}
