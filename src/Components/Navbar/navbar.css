@@ -42,6 +42,7 @@
   left: 0;
   top: 4.5em;
   height: 33vh;
+  z-index: 1;
   border-top: 1px solid #ccc;
 }
 #dark.navlink-mobile {
@@ -81,27 +82,32 @@
   }
   .navbar{
     padding: 1em 3em;
+    border-bottom:none;
   }
   .navlink-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 50%;
   }
   .navlinks-desktop ul {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
     margin-left: 3em;
   }
   .navlinks-desktop ul li {
     list-style: none;
-    margin: 0 2em;
+    margin: 0 3em;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.7);
   }
   #dark.navlinks-desktop ul li{
     color: rgba(255, 255, 255, 0.7);
   }
+  #dark.login {
+    background-color: #fff;
+  }
+  
   .nav-buttons{
     margin: 0;
   }

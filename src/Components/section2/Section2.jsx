@@ -4,8 +4,11 @@ import { useAuth } from "../../store/context";
 import chart from "../../Assest/Chart.png";
 import stats from "../../Assest/Statistic.png";
 import table from "../../Assest/Table.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Section2() {
+  AOS.init();
   const { theme } = useAuth();
   return (
     <div className="invest" id={theme}>
@@ -60,14 +63,19 @@ function Section2() {
 
         {/* start minning */}
 
-        <div className="start-mining">
-          <div  className="start-mining__text">
+        <div
+          className="start-mining"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out-back"
+        >
+          <div className="start-mining__text">
             <h3>Start mining now </h3>
             <p>
               Join now with CRAPPO to get the latest news and start mining now
             </p>
           </div>
-          <div  className="start-mining__input">
+          <div className="start-mining__input">
             <input type="text" placeholder="Enter Your Email" />
             <button className="button3"> Subscribe</button>
           </div>

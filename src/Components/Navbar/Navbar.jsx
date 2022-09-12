@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../../store/context";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import "./navbar.css";
 import logo from "../../Assest/Logo.png";
 
@@ -41,7 +43,7 @@ function Navbar() {
         </div>
       </div>
       <div className="hambuger" onClick={toggleMenu}>
-        Ham
+        {menu ? <CloseIcon /> : <MenuIcon />}
       </div>
       {/* ///////////desktop ///////////*/}
       <div className="navlink-desktop">
@@ -54,7 +56,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="nav-buttons">
-          <button className={theme?"button1":"button3"}>Login</button>
+          <button className="button1 login" id={theme}>Login</button>
           <button className="button2">Register</button>
         </div>
       </div>
