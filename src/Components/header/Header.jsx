@@ -4,6 +4,7 @@ import "./header.css";
 import hero from "../../Assest/hero-img.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function Header() {
   AOS.init();
@@ -28,9 +29,19 @@ function Header() {
               data-aos-offset="200"
               data-aos-delay="50"
               data-aos-duration="1000"
+              data-aos-once="true"
+              data-aos-mirror="false"
               data-aos-easing="ease-in-out-back"
             >
-              Fastest & Secure <span>Platform To Invest</span> in Crypto
+              Fastest & Secure{" "}
+              <div
+                data-aos="flip-up"
+                data-aos-duration="500"
+                data-aos-delay="800"
+              >
+                Platform To Invest
+              </div>{" "}
+              in Crypto
             </h1>
           </div>
           <div>
@@ -52,7 +63,10 @@ function Header() {
               data-aos-easing="ease-in-out-back"
             >
               {" "}
-              Try for FREE
+              Try for FREE{" "}
+              <span className="Arrow-button">
+                <ArrowForwardIosIcon color="primary" sx={{ fontSize: 10}} />
+              </span>
             </button>
           </div>
         </div>
