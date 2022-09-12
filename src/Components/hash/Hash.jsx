@@ -13,7 +13,7 @@ function Hash() {
         </p>
       </div>
 
-      <div className="hashtab" id={theme}>
+      <div className="hashtab" id={theme} data-aos="zoom-in-left">
         <div>
           <input type="search" placeholder="Enter your hash rate:" />
           <select name="" id="">

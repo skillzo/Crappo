@@ -12,7 +12,7 @@ function Section0() {
     <div className="numbers-container" id={theme}>
       <div className="numbers-image">
         <img src={Illustrations} alt="" 
-        data-aos="slide-left"
+        data-aos="fade-up"
         data-aos-anchor-placement="top-center"
         data-aos-duration="500"
         data-aos-mirror="flase"
