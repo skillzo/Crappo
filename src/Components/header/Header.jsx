@@ -1,18 +1,49 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useAuth } from "../../store/context";
 import "./header.css";
 import hero from "../../Assest/hero-img.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import gsap from "gsap";
 
 function Header() {
+  const textRef = useRef();
+  const saveRef = useRef();
+  const imgRef = useRef();
+  useEffect(() => {
+    var tl = gsap.timeline();
+    const ctx = gsap.context(() => {
+      tl.from(textRef.current, {
+        duration: 2,
+        x: 100,
+        ease: "elastic",
+      })
+        .from(saveRef.current, {
+          duration: 1,
+          x: 100,
+        })
+        .from(
+          imgRef.current,
+          {
+            duration: 1,
+            y: -100,
+            repeat: -1,
+            yoyo: true,
+          },
+          "-=2"
+        );
+    });
+    return () => {
+      ctx.revert();
+    };
+  }, []);
   AOS.init();
   const { theme } = useAuth();
   return (
     <div className="cointainer-header" id={theme}>
       <div className="button-slider" id={theme}>
-        <div className="percent-save" id={theme}>
+        <div className="percent-save" id={theme} ref={saveRef}>
           <p>75% SAVE</p>
         </div>
         <div>
@@ -24,15 +55,7 @@ function Header() {
         <div className="header-text">
           <div className="header-main__text">
             {" "}
-            <h1
-              data-aos="slide-left"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              data-aos-mirror="false"
-              data-aos-easing="ease-in-out-back"
-            >
+            <h1 ref={textRef}>
               Fastest & Secure{" "}
               <div
                 data-aos="flip-up"
@@ -65,7 +88,7 @@ function Header() {
               {" "}
               Try for FREE{" "}
               <span className="Arrow-button">
-                <ArrowForwardIosIcon color="primary" sx={{ fontSize: 10}} />
+                <ArrowForwardIosIcon color="primary" sx={{ fontSize: 10 }} />
               </span>
             </button>
           </div>
@@ -73,15 +96,7 @@ function Header() {
 
         {/* header image here */}
         <div className="header-image">
-          <img
-            src={hero}
-            alt=""
-            data-aos="zoom-out-left"
-            data-aos-duration="500"
-            data-aos-once="true"
-            data-aos-easing="ease-in-sine"
-            data-aos-offset="500"
-          />
+          <img src={hero} alt="" ref={imgRef} />
         </div>
       </div>
     </div>
