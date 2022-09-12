@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useAuth } from "../../store/context";
 import "./header.css";
 import hero from "../../Assest/hero-img.png";

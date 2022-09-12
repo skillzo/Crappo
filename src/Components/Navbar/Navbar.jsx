@@ -4,6 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import "./navbar.css";
 import logo from "../../Assest/Logo.png";
+import CustomizedSwitches from "../Switch/Switch";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -14,7 +15,7 @@ function Navbar() {
   }
   return (
     <div className="navbar" id={theme}>
-      <div className="navbar-logo" onClick={themeToggle}>
+      <div className="navbar-logo">
         <div>
           <img src={logo} alt="" />
         </div>
@@ -42,6 +43,7 @@ function Navbar() {
           <button className="button2">Register</button>
         </div>
       </div>
+      <CustomizedSwitches onSwitch={themeToggle} />
       <div className="hambuger" onClick={toggleMenu}>
         {menu ? <CloseIcon /> : <MenuIcon />}
       </div>
@@ -56,7 +58,9 @@ function Navbar() {
           </ul>
         </div>
         <div className="nav-buttons">
-          <button className="button1 login" id={theme}>Login</button>
+          <button className="button1 login" id={theme}>
+            Login
+          </button>
           <button className="button2">Register</button>
         </div>
       </div>
